@@ -21,9 +21,16 @@
 #define USBD_PRODUCT_STRING     "JHEMCUF405"
 
 #define LED0                    PC14  //Green
-#define BEEPER                  PC13
-#define BEEPER_INVERTED
+// kijan PINIO instead of beeper ************PINIO to disable BT*****************
+//#define BEEPER                  PC13
+// kijan end #define BEEPER_INVERTED
 
+// kijan PINIO instead of beeper ************PINIO to disable BT*****************
+#define USE_PINIO
+#define USE_PINIOBOX
+#define PINIO1_PIN                  PC13  
+#define PINIO1_FLAGS                PINIO_FLAGS_INVERTED
+// kijan end
 // *************** SPI1 Gyro & ACC *******************
 #define USE_SPI
 #define USE_SPI_DEVICE_1
